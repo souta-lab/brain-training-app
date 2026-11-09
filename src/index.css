@@ -58,3 +58,27 @@ button {
   outline: none;
   transition: all 0.2s ease;
 }
+
+/* Family layer — s0u7a properties shared discipline.
+   本文フォントを共通スタックへ寄せ、字間・選択・フォーカスの規律を揃える。
+   ダークテーマと配色はこのアプリのまま維持する。 */
+:root {
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+    "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.04em;
+  text-wrap: pretty;
+}
+
+::selection {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}

@@ -24,7 +24,7 @@ export const useDualNBack = (n = 1, roundLength = 20, speed = 2500) => {
     const speakLetter = (letter) => {
         // Use the backend proxy for Google TTS
         // Add a timestamp to prevent caching if needed, though caching is actually good here
-        const audio = new Audio(`/api/tts?text=${letter}`);
+        const audio = new Audio(`https://brain-training-app.pages.dev/api/tts?text=${letter}`);
         audio.play().catch(e => console.error("Audio play failed:", e));
     };
 
